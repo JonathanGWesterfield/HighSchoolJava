@@ -1,0 +1,45 @@
+//Jonathan Westerfield
+
+import java.awt.*;
+import java.util.Scanner;
+import javax.swing.*;
+import java.applet.*;
+
+public class Lab20B extends JFrame
+{
+  private MyPanel drawingArea = new MyPanel();
+  private Image icon = Utility.loadImage("3dbox.gif");
+  
+  private class MyPanel extends JPanel
+  {
+    public MyPanel()
+    {
+      setPreferredSize(new Dimension(300,300));
+      setBackground(Color.WHITE);
+    }
+  }
+  
+  public static void main(String[] args)
+  {
+    Lab20B lab = new Lab20B();
+    lab.setVisible(true);
+  }
+  
+  public void paintComponents(Graphics g)
+  {
+    super.paintComponents(g);
+    g.setColor(Color.BLACK);
+    g.fillRect(10,10, 50,50);
+    g.fillRect(30,30,50,50);
+    
+  }
+  
+  Lab20B ()
+  {
+    setTitle("3D Box");
+    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    setContentPane(drawingArea);
+    setIconImage(Utility.loadImage("3dbox.gif"));
+    pack();
+  }
+}

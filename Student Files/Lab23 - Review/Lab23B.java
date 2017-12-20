@@ -1,0 +1,32 @@
+//Jonathan Westerfield
+
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+public class Lab23B
+{
+  String[] sentence;
+  char[] sentence;
+  String word;
+  
+  public static void main(String[] args)
+  {
+    Lab23B lab = new Lab23B();
+    lab.input();
+    lab.output();
+  }
+  
+  public void input()
+  {
+    Scanner reader = new Scanner(System.in);
+    System.out.print("Enter a sentence: ");
+    list = reader.nextLine().toCharArray();
+    System.out.print("Enter a word: ");
+    word = reader.next();
+  }
+  
+  public void output()
+  {
+    
+  }
+}

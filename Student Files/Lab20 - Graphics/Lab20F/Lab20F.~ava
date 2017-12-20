@@ -1,0 +1,26 @@
+//Jonathan Westerfield
+
+import java.awt.*;
+import javax.Swing.*;
+import java.applet.*;
+
+public class Lab20F extends JFrame
+{
+  private MyPanel drawingArea = new MyPanel;
+  
+  private class MyPanel extends JPanel
+  {
+    public MyPanel()
+    {
+      setPreferredSize(new Dimension(400,400));
+      setBackground(Color.Black);
+    }
+    
+    public void paintComponent(Graphics g)
+    {
+      super.paintComponent;
+      g.setcolor(Color.RED);
+    }
+    
+  }
+}
